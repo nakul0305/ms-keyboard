@@ -11,16 +11,34 @@ function handleKeyStart(e){
 	$(e.currentTarget).css({'background-color':'#DDD'});
 	var oldText = $(".textAr").html();
 	var keyPress = e.currentTarget.firstChild.innerHTML;
-	if(keyPress!='&lt;&lt; backspace' && keyPress!='enter' && keyPress!='^'){
+	
+	if(keyPress!='&lt;&lt; backspace' && keyPress!='enter' && keyPress!='&lt;' && keyPress!='&gt;'){
 		$(".textAr").html(oldText+keyPress);
 	}
+	
 	if(keyPress==''){
 		$(".textAr").html(oldText+' ');
 	}
+	
 	if(keyPress=='&lt;&lt; backspace'){
 		var newText = oldText.substring(0,oldText.length-1);
 		$(".textAr").html(newText);
 	}
+	
+	if(keyPress=='&lt;'){
+		var evt = $.Event("keydown");
+		evt.which = 37; // # Some key code value
+		//$("input").val(String.fromCharCode(e.which));
+		$(document).trigger(evt);
+	}
+	
+	if(keyPress=='&gt;'){
+		var evt = $.Event("keydown");
+		evt.which = 39; // # Some key code value
+		//$("input").val(String.fromCharCode(e.which));
+		$(document).trigger(evt);
+	}
+	
 };
 
 function handleKeyEnd(e){
