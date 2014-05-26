@@ -1,12 +1,12 @@
 // JavaScript Document
 var targetTouches = null;
 function hideKeyboard(){
-	$(".touchArea").animate({opacity:'.05'},450,function(){
+	$(".touchArea").animate({opacity:'.05'},150,function(){
 	});
 }
 
 function showKeyboard(){
-	$(".touchArea").animate({opacity:'1'},300,function(){
+	$(".touchArea").animate({opacity:'1'},150,function(){
 	});
 }
 
