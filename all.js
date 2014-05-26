@@ -1,6 +1,6 @@
 // JavaScript Document
 function hideKeyboard(){
-	$(".touchArea").animate({opacity:'.1'},600,function(){
+	$(".touchArea").animate({opacity:'.05'},450,function(){
 	});
 }
 
