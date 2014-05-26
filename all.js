@@ -63,8 +63,7 @@ function handleEnd(e){
 	e.preventDefault();
 	var touchPoints = e.touches;
 	if(touchPoints.length<2){
-		showKeyboard();
-		return 0;
+		showKeyboard();		
 	}
 	$(".para").html("OK, somethings happening.."+touchPoints.length+" touches");
 };
