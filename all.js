@@ -1,7 +1,21 @@
 // JavaScript Document
+function hideKeyboard(){
+	$(".touchArea").animate({opacity:'.1'},600,function(){
+	});
+}
+
+function showKeyboard(){
+	$(".touchArea").animate({opacity:'1'},300,function(){
+	});
+}
+
 function handleStart(e){
 	e.preventDefault();
 	var touchPoints = e.touches;
+	if(touchPoints.length>1){
+		hideKeyboard();
+		return 0;
+	}
 	$(".para").html("OK, somethings happening.."+touchPoints.length+" touches");
 };
 
@@ -48,6 +62,10 @@ function handleKeyEnd(e){
 function handleEnd(e){
 	e.preventDefault();
 	var touchPoints = e.touches;
+	if(touchPoints.length<2){
+		showKeyboard();
+		return 0;
+	}
 	$(".para").html("OK, somethings happening.."+touchPoints.length+" touches");
 };
 
