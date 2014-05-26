@@ -17,11 +17,21 @@ body{
 }
 
 .dummyText{
-	font-size:24px;
+	overflow:hidden;
+	font-size:18px;
+	color:#CCC;
 }
 
 .content{
+	
 	overflow:scroll;
+	width:100%;	
+}
+
+.quesSt{
+	padding:0;
+	font-size:24px;
+	margin:5px 0px 0px 0;
 }
 
 .touchArea{
