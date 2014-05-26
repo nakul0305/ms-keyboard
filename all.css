@@ -29,7 +29,7 @@ body{
 	height:80px;
 	width:100px;
 	background-color:rgba(148,148,148,1.00);
-	margin:10px 5px 5px 5px;
+	margin:4px 2px 2px 2px;
 	float:left;
 }
 
@@ -37,7 +37,7 @@ body{
 	height:80px;
 	width:100px;
 	background-color:rgba(148,148,148,1.00);
-	margin:5px;
+	margin:2px;
 	float:left;
 }
 
@@ -45,7 +45,7 @@ body{
 	height:80px;
 	width:210px;
 	background-color:rgba(148,148,148,1.00);
-	margin:10px 5px 5px 5px;
+	margin:4px 2px 2px 2px;
 	float:left;
 }
 
@@ -53,7 +53,7 @@ body{
 	height:80px;
 	width:160px;
 	background-color:rgba(148,148,148,1.00);
-	margin:5px;
+	margin:2px;
 	float:left;
 }
 
