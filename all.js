@@ -1,4 +1,5 @@
 // JavaScript Document
+var targetTouches = null;
 function hideKeyboard(){
 	$(".touchArea").animate({opacity:'.05'},450,function(){
 	});
@@ -22,6 +23,9 @@ function handleStart(e){
 function handleKeyStart(e){
 	e.preventDefault();
 	var touchPoints = e.touches;
+	if(touchPoints.length>1){
+		return 0;
+	}
 	$(e.currentTarget).css({'background-color':'#DDD'});
 	var oldText = $(".textAr").html();
 	var keyPress = e.currentTarget.firstChild.innerHTML;
