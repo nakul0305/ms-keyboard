@@ -20,7 +20,7 @@ body{
 
 .touchArea{
 	width:100%;
-	margin-top:600px;
+	margin-top:520px;
 	height:370px;
 	background-color:#444;	
 }
@@ -43,7 +43,7 @@ body{
 
 .key1-row1{
 	height:80px;
-	width:210px;
+	width:204px;
 	background-color:rgba(148,148,148,1.00);
 	margin:4px 2px 2px 2px;
 	float:left;
