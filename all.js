@@ -27,34 +27,34 @@ function handleKeyStart(e){
 		return 0;
 	}
 	$(e.currentTarget).css({'background-color':'#DDD'});
-	var oldText = $(".textAr").html();
+	var oldText = $(".textAr").val();
 	var keyPress = e.currentTarget.firstChild.innerHTML;
 	
 	if(keyPress!='&lt;&lt; backspace' && keyPress!='enter' && keyPress!='&lt;' && keyPress!='&gt;'){
-		$(".textAr").html(oldText+keyPress);
+		$(".textAr").val(oldText+keyPress);
 	}
 	
 	if(keyPress==''){
-		$(".textAr").html(oldText+' ');
+		$(".textAr").val(oldText+' ');
 	}
 	
 	if(keyPress=='&lt;&lt; backspace'){
 		var newText = oldText.substring(0,oldText.length-1);
-		$(".textAr").html(newText);
+		$(".textAr").val(newText);
 	}
 	
 	if(keyPress=='&lt;'){
-		var evt = $.Event("keydown");
+		var evt = $.Event('keypress');
 		evt.which = 37; // # Some key code value
 		//$("input").val(String.fromCharCode(e.which));
-		$(document).trigger(evt);
+		$(".textAr").trigger(evt);
 	}
 	
 	if(keyPress=='&gt;'){
-		var evt = $.Event("keydown");
+		var evt = $.Event('keypress');
 		evt.which = 39; // # Some key code value
 		//$("input").val(String.fromCharCode(e.which));
-		$(document).trigger(evt);
+		$(".textAr").trigger(evt);
 	}
 	
 };

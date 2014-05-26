@@ -21,6 +21,7 @@ body{
 .touchArea{
 	position:absolute;
 	width:100%;
+	left:0;
 	top:520px;
 	height:340px;
 	background-color:#444;	
