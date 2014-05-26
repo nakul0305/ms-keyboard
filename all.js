@@ -1,13 +1,13 @@
 // JavaScript Document
 function handleStart(e){
 	e.preventDefault();
-	var touchPoints = e.changedTouches;
+	var touchPoints = e.touches;
 	$(".para").html("OK, somethings happening.."+touchPoints.length+" touches");
 };
 
 function handleKeyStart(e){
 	e.preventDefault();
-	var touchPoints = e.changedTouches;
+	var touchPoints = e.touches;
 	$(e.currentTarget).css({'background-color':'#DDD'});
 	var oldText = $(".textAr").html();
 	var keyPress = e.currentTarget.firstChild.innerHTML;
@@ -47,7 +47,7 @@ function handleKeyEnd(e){
 
 function handleEnd(e){
 	e.preventDefault();
-	var touchPoints = e.changedTouches;
+	var touchPoints = e.touches;
 	$(".para").html("OK, somethings happening.."+touchPoints.length+" touches");
 };
 
